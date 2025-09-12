@@ -379,15 +379,105 @@ export default function Lab1(){
                     <textarea id="wd-textarea" cols={70} rows={11} defaultValue="Aryan Raveshia is a software engineer pursuing his Master’s in Computer Science at Northeastern University, Boston. His academic focus spans AI and systems, with an interest in building large-scale, reliable platforms. Before graduate school, Aryan earned his Bachelor’s in Computer and Communication Engineering from Manipal Institute of Technology, where he specialized in Big Data Analytics. Professionally, he has worked as an Entry-Level Software Engineer at Boeing, contributing to simulation engines and performance-driven solutions. Aryan is passionate about blending usability with high-performance systems and aspires to grow as a Software Engineer or Machine Learning Engineer at leading tech companies.">
                     </textarea> 
                 </form>
-                <h5 id="wd-buttons">Buttons</h5>
-                <button type="button"
-                        onClick={() => alert("Life is Good!")}
-                        id="wd-all-good">
-                        Hello World!
-                </button>
-
             </div>
+            <div>
+                <h5 id="wd-buttons">6c. Buttons</h5>
+                <h6 id="wd-radio-buttons">Radio buttons</h6>
 
+                <label>Favorite movie genre:</label>
+                <br />
+                <br/>
+                <input type="radio" name="radio-genre" id="wd-radio-comedy"/>
+                <label htmlFor="wd-radio-comedy">Comedy</label><br />
+
+                <input type="radio" name="radio-genre" id="wd-radio-romance"/>
+                <label htmlFor="wd-radio-romance">Romance</label><br />
+
+                <input type="radio" name="radio-genre" id="wd-radio-drama"/>
+                <label htmlFor="wd-radio-drama">Drama</label><br />
+
+                <input type="radio" name="radio-genre" id="wd-radio-scifi"/>
+                <label htmlFor="wd-radio-scifi">Science Fiction</label><br />
+                <input type="radio" name="radio-genre" id="wd-radio-fantasy"/>
+                <label htmlFor="wd-radio-fantasy">Fantasy</label>
+            </div>
+            <div>
+                <h6 id="wd-checkboxes">Checkboxes</h6>
+                <label>Favorite movie genre:</label><br/><br/>
+
+                <input type="checkbox" name="check-genre" id="wd-chkbox-comedy"/>
+                <label htmlFor="wd-chkbox-comedy">Comedy</label><br/>
+
+                 <input type="checkbox" name="check-genre" id="wd-chkbox-romance"/>
+                <label htmlFor="wd-chkbox-romance">Romance</label><br/>
+
+                <input type="checkbox" name="check-genre" id="wd-chkbox-drama"/>
+                <label htmlFor="wd-chkbox-drama">Drama</label><br/>
+
+                <input type="checkbox" name="check-genre" id="wd-chkbox-scifi"/>
+                <label htmlFor="wd-chkbox-scifi">Science Fiction</label><br/>
+
+                <input type="checkbox" name="check-genre" id="wd-chkbox-fantasy"/>
+                <label htmlFor="wd-chkbox-fantasy">Fantasy</label>
+            </div>
+            <div>
+                <h5>6d. Dropdowns</h5>
+                <h6>Single choice dropdown:</h6>
+                <select>
+                <option value="USD">USD</option>
+                <option value="INR">INR</option>
+                <option value="GBP">GBP</option>
+                <option value="AUD">AUD</option>
+                <option value="JPY">JPY</option>
+                </select>
+                <h6>Multiple choice dropdown:</h6>
+                <select multiple size={5}>
+                <option value="CAD">CAD</option>
+                <option value="EUR">EUR</option>
+                <option value="JPY">JPY</option>
+                <option value="AUD">AUD</option>
+                <option value="INR">INR</option>
+                </select>
+            </div>
+            <div>
+                <h5>
+                    6e. Upload files:
+                </h5>
+                <label htmlFor="fileUpload">Choose a file: </label>
+                <input type="file" id="fileUpload" name="fileUpload"/>
+                <br/>
+            </div>
+            <div>
+                <h4>7. Other HTML field types</h4>
+                <label htmlFor="wd-text-fields-email"> Email: </label>
+                <input type="email"
+                    placeholder="aryan.raveshia12@gmail.com"
+                    id="wd-text-fields-email"/><br/>
+                <br/>
+                <label htmlFor="wd-text-fields-salary-start"> Starting salary:</label>
+                <input type="number"
+                    placeholder="80000"
+                    id="wd-text-fields-salary-start"/><br/>
+                <br/>
+                <label htmlFor="wd-text-fields-rating"> Rating: </label>
+                <input type="range"
+                    defaultValue="0"
+                    max="5"
+                    placeholder="Doe"
+                    id="wd-text-fields-rating"/><br/>
+                <br/>
+                <label htmlFor="wd-text-fields-dob"> Date of birth: </label>
+                <input type="date"
+                    defaultValue="2025-09-12"
+                    id="wd-text-fields-dob"/><br/>
+            </div>
+            <h4>8. Anchor tag: </h4>
+            <h5>
+                Linking webpages example: 
+            </h5>
+            Please 
+            <a href="https://www.lipsum.com" id="wd-lipsum" target="_blank" rel="noopener noreferrer"> click here </a>
+            to get dummy text from the lipsum website<br/>
                 
         </div>
     );
