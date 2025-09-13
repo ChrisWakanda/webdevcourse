@@ -1,0 +1,33 @@
+import Link from "next/link";
+export default function TOC() {
+ return (
+    
+   <ul>
+        <br/>
+        <li>
+            <Link href="/Labs" id="wd-lab-link">
+            Home </Link>
+        </li>
+        <br/>
+        <li>
+            <Link href="/Kambaz" id="wd-kambaz-link">
+            Kambaz </Link>
+        </li>
+        <br/>
+        <li>
+            <Link href="/Labs/Lab1" id="wd-lab1-link">
+           Lab 1 </Link>
+        </li>
+        <br/>
+        <li>
+            <Link href="/Labs/Lab2" id="wd-lab2-link">
+           Lab 2 </Link>
+        </li>
+        <br/>
+        <li>
+            <Link href="/Labs/Lab3" id="wd-lab3-link">
+           Lab 3 </Link>
+        </li>
+        
+   </ul>
+);}
