@@ -10,7 +10,7 @@ export default function TOC() {
         </li>
         <br/>
         <li>
-            <Link href="/Kambaz" id="wd-kambaz-link">
+            <Link href="/" id="wd-kambaz-link">
             Kambaz </Link>
         </li>
         <br/>
