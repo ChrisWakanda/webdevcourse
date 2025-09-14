@@ -16,7 +16,7 @@ export default function Signin() {
             <input placeholder="password" type="password" id="signin-password" />
             <br/>
             <br/>
-            <Link href="Profile">Profile</Link>
+            <Link href="/Dashboard">Sign in to your account</Link>
             <br/>
             <h4>
                 Do not have an account? 

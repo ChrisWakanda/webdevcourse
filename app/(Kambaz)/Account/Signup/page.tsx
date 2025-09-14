@@ -15,8 +15,13 @@ export default function Signup() {
             </label>
             <input placeholder="password" type="password" id="signup-password" />
             <br/>
+            <label htmlFor="signup-password">
+                Password:
+            </label>
+            <label htmlFor="signup-verify-password"></label>
+            <input placeholder="verify password" type="password" id="signup-verify-password" />
             <br/>
-            <Link href="Profile">Profile</Link>
+            <Link href="Profile">Create Account</Link>
             <br/>
             <h4>
                 Already have an account? 
