@@ -10,10 +10,10 @@ export default function Assignments() {
         ASSIGNMENTS 40% of Total <button>+</button> </h3>
       <ul id="wd-assignment-list">
         <li className="wd-assignment-list-item">
-          <a href="/Courses/1234/Assignments/123"
+          <Link href="/Courses/1234/Assignments/123"
              className="wd-assignment-link" >
             A1 - ENV + HTML
-          </a> </li>
+          </Link> </li>
           <span>
             Multiple Modules | <b>Not available</b> until January 12 at 12:00am  
           </span>

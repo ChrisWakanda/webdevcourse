@@ -29,7 +29,7 @@ export default function Lab1(){
                     HTML is rendered from top-to-bottom. Line-by-line. So the first div or text you write is going to be displayed at the TOP. Anything after that written will automatically be pushed below the first one and displayed down. HTML is declarative and defines structure of the items on the webpage. Keep this in mind so you dont confused programming languages with HTML.
                 </p>
                 <p>
-                    Lectures will be held at the days and time shown below and will be recorded for those that can not attend. All times are Eastern Standard Time (EST). The recordings are meant as a convenience and not intended to be "binge watched" at a later time. The course is hands on and fast paced, and the lectures will contain time sensitive tasks you are responsible for.
+                    Lectures will be held at the days and time shown below and will be recorded for those that can not attend. All times are Eastern Standard Time (EST). The recordings are meant as a convenience and not intended to be binge watched at a later time. The course is hands on and fast paced, and the lectures will contain time sensitive tasks you are responsible for.
                 </p>
             </div>
             <div id="wd-lists-tag">
