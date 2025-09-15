@@ -74,13 +74,13 @@ export default function AssignmentEditor() {
                     <input type="checkbox" name="entry-options" id="text-entry"/>
                     <label htmlFor="text-entry">Text Entry</label><br/>
                     <input type="checkbox" name="entry-options" id="website-url-entry"/>
-                    <label htmlFor="text-entry">Website URL</label><br/>
+                    <label htmlFor="website-url-entry">Website URL</label><br/>
                      <input type="checkbox" name="entry-options" id="media-recordings-entry"/>
-                    <label htmlFor="text-entry">Media Recordings</label><br/>
+                    <label htmlFor="media-recordings-entry">Media Recordings</label><br/>
                     <input type="checkbox" name="entry-options" id="student-annotations-entry"/>
-                    <label htmlFor="text-entry">Student Annotations</label><br/>
+                    <label htmlFor="student-annotations-entry">Student Annotations</label><br/>
                     <input type="checkbox" name="entry-options" id="file-upload-entry"/>
-                    <label htmlFor="text-entry">File Uploads</label><br/>
+                    <label htmlFor="file-upload-entry">File Uploads</label><br/>
                 </td>
             </tr>
             <tr>
