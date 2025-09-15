@@ -18,7 +18,7 @@ export default function KambazNavigation() {
             <br/>
             <Link href="/Labs" id="kambaznav-labs">Labs</Link>
             <br/>
-            <Link href="https://github.com/ChrisWakanda/webdevcourse/tree/lab1" id="kambaznav-github" target="_blank" rel="noopener noreferrer">Github</Link>
+            <Link href="https://github.com/ChrisWakanda/webdevcourse/tree/A1" id="kambaznav-github" target="_blank" rel="noopener noreferrer">Github</Link>
             <h6>
                 Made by Aryan Ishan Raveshia
             </h6>
