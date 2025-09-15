@@ -1,9 +1,6 @@
-export default function Courses(){
-    return (
-        <div>
-            <h1>
-                Course 001
-            </h1>
-        </div>
-    )
+import { redirect } from "next/navigation";
+
+export default async function CoursesPage({ params, }: { params: Promise<{ cid: string }>; }) {
+ const { cid } = await params;
+ redirect(`/Courses/${cid}/Home`);
 }

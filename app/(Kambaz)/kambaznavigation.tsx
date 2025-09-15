@@ -10,7 +10,7 @@ export default function KambazNavigation() {
             <br/>
             <Link href="/Dashboard" id="kambaznav-dashboard">Dashboard</Link>
             <br/>
-            <Link href="/Dashboard" id="kambaznav-courses">Course</Link>
+            <Link href="/Dashboard" id="kambaznav-courses">Courses</Link>
             <br/>
             <Link href="/Calendar" id="kambaznav-calendar">Calendar</Link>
             <br/>

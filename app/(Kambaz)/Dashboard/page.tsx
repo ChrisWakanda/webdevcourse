@@ -27,6 +27,35 @@ export default function Dashboard() {
                             </button>
                         </div>
                     </Link>
+                    <br/>
+                    <Link href="/Courses/002" className="dashboard-course-link">
+                        <Image src="/images/angular.jpg" alt="Angular Course Image" width={300} height={200}></Image>
+                        <div>
+                            <h5>
+                                CS002 Angular
+                            </h5>
+                            <p className="dashboard-course-title">
+                                Full Stack Software Developer
+                            </p>
+                            <button>
+                                Go
+                            </button>
+                        </div>
+                    </Link>
+                    <Link href="/Courses/003" className="dashboard-course-link">
+                        <Image src="/images/vuejs1.jpg" alt="Vue.js Course Image" width={300} height={200}></Image>
+                        <div>
+                            <h5>
+                                CS003 Vue.js
+                            </h5>
+                            <p className="dashboard-course-title">
+                                Full Stack Software Developer
+                            </p>
+                            <button>
+                                Go
+                            </button>
+                        </div>
+                    </Link>
                 </div>
                 <div className="dashboard-course">...</div>
                 <div className="dashboard-course">...</div>
