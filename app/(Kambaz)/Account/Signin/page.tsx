@@ -8,12 +8,12 @@ export default function Signin() {
             <label htmlFor="signin-username">
                 Username:
             </label>
-            <input placeholder="username" id="signin-username" />
+            <input placeholder="username" id="signin-username" defaultValue="Aryan"/>
             <br/>
             <label htmlFor="signin-password">
                 Password:
             </label>
-            <input placeholder="password" type="password" id="signin-password" />
+            <input placeholder="password" type="password" id="signin-password" defaultValue="Aryan"/>
             <br/>
             <br/>
             <Link href="/Dashboard">Sign in to your account</Link>
