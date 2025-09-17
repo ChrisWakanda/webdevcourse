@@ -1,3 +1,5 @@
+"use client"; 
+
 export default function Lab1(){
     return (
         
@@ -386,7 +388,7 @@ export default function Lab1(){
             <div>
                 <h5 id="wd-buttons">6c. Buttons</h5>
                 <h6 id="wd-basic-buttons">Basic Clicking Button</h6>
-                <button>Click me to do nothing!</button>
+                <button onClick={() => alert('You did nothing!')}>Click me to do nothing!</button>
                 <h6 id="wd-radio-buttons">Radio buttons</h6>
 
                 <label>Favorite movie genre:</label>
