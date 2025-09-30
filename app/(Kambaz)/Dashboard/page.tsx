@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Card, CardBody, CardImg, CardText, CardTitle, Col, Row } from "react-bootstrap";
 export default function Dashboard() {
     return (
         <div id="dashboard">
@@ -12,53 +13,115 @@ export default function Dashboard() {
             </h3>
             <hr/>
             <div id="dashboard-course-list">
-                <div className="dashboard-course">
-                    <Link href="/Courses/001" className="dashboard-course-link">
-                        <Image src="/images/reactjs1.jpg" alt="Reactjs Course Image" width={300} height={200}></Image>
-                        <div>
-                            <h5>
-                                CS001 React JS
-                            </h5>
-                            <p className="dashboard-course-title">
-                                Full Stack Software Developer
-                            </p>
-                            <button>
-                                Go
-                            </button>
-                        </div>
-                    </Link>
-                    <br/>
-                    <Link href="/Courses/002" className="dashboard-course-link">
-                        <Image src="/images/angular.jpg" alt="Angular Course Image" width={300} height={200}></Image>
-                        <div>
-                            <h5>
-                                CS002 Angular
-                            </h5>
-                            <p className="dashboard-course-title">
-                                Full Stack Software Developer
-                            </p>
-                            <button>
-                                Go
-                            </button>
-                        </div>
-                    </Link>
-                    <Link href="/Courses/003" className="dashboard-course-link">
-                        <Image src="/images/vuejs1.jpg" alt="Vue.js Course Image" width={300} height={200}></Image>
-                        <div>
-                            <h5>
-                                CS003 Vue.js
-                            </h5>
-                            <p className="dashboard-course-title">
-                                Full Stack Software Developer
-                            </p>
-                            <button>
-                                Go
-                            </button>
-                        </div>
-                    </Link>
-                </div>
-                <div className="dashboard-course">...</div>
-                <div className="dashboard-course">...</div>
+
+
+            <Row xs={1} md={5} className="g-4">
+                <Col className="wd-dashboard-course-list" style={{ width: "300px" }}>
+                    <Card>
+                        <Link href="/Courses/001" className="dashboard-course-link text-decoration text-dark">
+                            <CardImg variant="top" src="/images/reactjs1.jpg" width="100%" height={160}/>
+                            <CardBody>
+                                <CardTitle className="wd-dashboard-course-title text-nowrap overflow-hidden">
+                                    CS001 React JS
+                                </CardTitle>
+                                <CardText  className="wd-dashboard-course-description overflow-hidden" style={{ height: "100px" }}>
+                                    Specialization: Full Stack Software Developer
+                                </CardText>
+                            </CardBody>
+                        </Link>
+                    </Card>         
+                </Col>
+                <Col className="wd-dashboard-course-list" style={{ width: "300px" }}>
+                    <Card>
+                        <Link href="/Courses/002" className="dashboard-course-link text-decoration text-dark">
+                            <CardImg variant="top" src="/images/angular.jpg" width="100%" height={160}/>
+                            <CardBody>
+                                <CardTitle className="wd-dashboard-course-title text-nowrap overflow-hidden">
+                                    CS002 Angular JS
+                                </CardTitle>
+                                <CardText  className="wd-dashboard-course-description overflow-hidden" style={{ height: "100px" }}>
+                                    Specialization: Full Stack Software Developer
+                                </CardText>
+                            </CardBody>
+                        </Link>
+                    </Card>
+                </Col>
+                <Col className="wd-dashboard-course-list" style={{ width: "300px" }}>
+                    <Card>
+                        <Link href="/Courses/003" className="dashboard-course-link text-decoration text-dark">
+                            <CardImg variant="top" src="/images/vuejs1.jpg" width="100%" height={160}/>
+                            <CardBody>
+                                <CardTitle className="wd-dashboard-course-title text-nowrap overflow-hidden">
+                                    CS003 Vue JS
+                                </CardTitle>
+                                <CardText  className="wd-dashboard-course-description overflow-hidden" style={{ height: "100px" }}>
+                                    Specialization: Full Stack Software Developer
+                                </CardText>
+                            </CardBody>
+                        </Link>
+                    </Card>
+                </Col>
+                <Col className="wd-dashboard-course-list" style={{ width: "300px" }}>
+                    <Card>
+                        <Link href="/Courses/004" className="dashboard-course-link text-decoration text-dark">
+                            <CardImg variant="top" src="/images/c++.png" width="100%" height={160}/>
+                            <CardBody>
+                                <CardTitle className="wd-dashboard-course-title text-nowrap overflow-hidden">
+                                    CS004 C++
+                                </CardTitle>
+                                <CardText  className="wd-dashboard-course-description overflow-hidden" style={{ height: "100px" }}>
+                                    Specialization: Full Stack Software Developer
+                                </CardText>
+                            </CardBody>
+                        </Link>
+                    </Card>
+                </Col>
+                <Col className="wd-dashboard-course-list" style={{ width: "300px" }}>
+                    <Card>
+                        <Link href="/Courses/005" className="dashboard-course-link text-decoration text-dark">
+                            <CardImg variant="top" src="/images/python.jpeg" width="100%" height={160}/>
+                            <CardBody>
+                                <CardTitle className="wd-dashboard-course-title text-nowrap overflow-hidden">
+                                    CS005 Python
+                                </CardTitle>
+                                <CardText  className="wd-dashboard-course-description overflow-hidden" style={{ height: "100px" }}>
+                                    Specialization: Full Stack Software Developer
+                                </CardText>
+                            </CardBody>
+                        </Link>
+                    </Card>
+                </Col>
+                <Col className="wd-dashboard-course-list" style={{ width: "300px" }}>
+                    <Card>
+                        <Link href="/Courses/006" className="dashboard-course-link text-decoration text-dark">
+                            <CardImg variant="top" src="/images/javascript.png" width="100%" height={160}/>
+                            <CardBody>
+                                <CardTitle className="wd-dashboard-course-title text-nowrap overflow-hidden">
+                                    CS006 Javascript
+                                </CardTitle>
+                                <CardText  className="wd-dashboard-course-description overflow-hidden" style={{ height: "100px" }}>
+                                    Specialization: Full Stack Software Developer
+                                </CardText>
+                            </CardBody>
+                        </Link>
+                    </Card>
+                </Col>
+                <Col className="wd-dashboard-course-list" style={{ width: "300px" }}>
+                    <Card>
+                        <Link href="/Courses/007" className="dashboard-course-link text-decoration text-dark">
+                            <CardImg variant="top" src="/images/golang.png" width="100%" height={160}/>
+                            <CardBody>
+                                <CardTitle className="wd-dashboard-course-title text-nowrap overflow-hidden">
+                                    CS007 Golang
+                                </CardTitle>
+                                <CardText  className="wd-dashboard-course-description overflow-hidden" style={{ height: "100px" }}>
+                                    Specialization: Full Stack Software Developer
+                                </CardText>
+                            </CardBody>
+                        </Link>
+                    </Card>
+                </Col>
+            </Row>
             </div>
         </div>
     )
