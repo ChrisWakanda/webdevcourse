@@ -1,16 +1,18 @@
 import { ReactNode } from "react";
+import "./styles.css";
 import KambazNavigation from "./kambaznavigation";
 export default function AccountLayout({ children }: Readonly<{ children: ReactNode }>) {
     return (
-        <table>
-            <tbody>
-                <tr>
-                    <td valign="top" width="200">
-                        <KambazNavigation />
-                    </td>
-                    <td valign="top" width="90%">{children}</td>
-                </tr>
-            </tbody>
-        </table>
+        <div id="wd-kambaz">
+            <div className="d-flex">
+                <div>
+                    <KambazNavigation/>
+                </div>
+                <div className="wd-main-content-offset p-3 flex-fill">
+                    {children}
+                </div>
+
+            </div>
+        </div>
     )
 }

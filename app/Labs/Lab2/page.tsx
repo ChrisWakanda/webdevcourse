@@ -18,6 +18,7 @@ import BootstrapTables from "./BootstrapTables";
 import BootstrapLists from "./BootstrapLists";
 import BootstrapForms from "./BootstrapForms";
 import BootstrapNavigation from "./BootstrapNavigation";
+import ReactIcons from "./ReactIcons";
 export default function Lab2(){
     return (
         <div className="container">
@@ -84,6 +85,7 @@ export default function Lab2(){
             <Float/>
             <GridLayout/>
             <Flex/>
+            <ReactIcons/>
             <BootstrapGrids/>
             <ScreenSizeLabel/>
             <BootstrapTables/>
