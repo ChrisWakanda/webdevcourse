@@ -1,126 +1,147 @@
-export default function AssignmentEditor() {
-  return (
-    <div id="wd-assignments-editor">
-      <label htmlFor="wd-name"><b>Assignment Name:</b></label>
-      <br/><br/>
-      <input id="wd-name" defaultValue="A1 - ENV + HTML" /><br /><br />
-      <textarea id="wd-description" cols={60} rows={7} defaultValue="The assignment is available online. For this HTML assignment, I set up the environment and created basic web pages using HTML. I practiced adding headings, paragraphs, links, and lists to structure content properly. Setting up the environment allowed me to test my code in a browser and see how different HTML tags work, giving me a solid foundation for future web development."></textarea>
-      <br />
-      <table>
-        <tbody>
-            
-            <tr>
-                <td align="right" valign="top">
-                    <label htmlFor="wd-points">Points:</label>
-                </td>
-                <td>
-                    <input id="wd-points" defaultValue={100} />
-                </td>
-            </tr>
-            
-            <tr>
-                <td align="right" valign="top">
-                        <label htmlFor="wd-group">Assignment Group:</label>
-                </td>
-                <td>
-                    <select id="wd-group">
-                        <option>
-                            Assignments
-                        </option>
-                        <option>
-                            etc
-                        </option>
-                    </select>
-                </td>
-            </tr>
-            
-            <tr>
-                <td align="right" valign="top">
-                    <label htmlFor="wd-display-grade-as">Display Grade as:</label>
-                </td>
-                <td>
-                    <select id="wd-display-grade-as">
-                    <option>
-                        Percentage
-                    </option>
-                    <option>
-                        Letter Grade
-                    </option>
-                    </select>
-                </td>
-            </tr>
-            
-            <tr>
-                <td align="right" valign="top">
-                    <label htmlFor="wd-submission-type">Submission Type:</label>
-                </td>
-                <td>
-                    <select id="wd-submission-type">
-                    <option>
-                        Online
-                    </option>
-                    <option>
-                        In-Person (Offline)
-                    </option>
-                    </select>
-                </td>
-            </tr>
-            
-            <tr>
-                <td align="right" valign="top" >
-                    <label>Online Entry Options:</label>
-                </td>
-                <td>
-                    <input type="checkbox" name="entry-options" id="text-entry"/>
-                    <label htmlFor="text-entry">Text Entry</label><br/>
-                    <input type="checkbox" name="entry-options" id="website-url-entry"/>
-                    <label htmlFor="website-url-entry">Website URL</label><br/>
-                     <input type="checkbox" name="entry-options" id="media-recordings-entry"/>
-                    <label htmlFor="media-recordings-entry">Media Recordings</label><br/>
-                    <input type="checkbox" name="entry-options" id="student-annotations-entry"/>
-                    <label htmlFor="student-annotations-entry">Student Annotations</label><br/>
-                    <input type="checkbox" name="entry-options" id="file-upload-entry"/>
-                    <label htmlFor="file-upload-entry">File Uploads</label><br/>
-                </td>
-            </tr>
-            <tr>
-                <td align="right" valign="top" >
-                    <label htmlFor="wd-assign-to">Assign to:</label>
-                </td>
-                <td>
-                    <input id="wd-assign-to" defaultValue="Everyone" />
-                </td>
-            </tr>
-            <tr>
-                <td align="right" valign="top" >
-                    <label htmlFor="wd-due">Due:</label>
-                </td>
-                <td>
-                    <input type="date" id="wd-due" defaultValue="2025-01-20"/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label htmlFor="wd-available-from">Available From:</label><br/>
-                    <input type="date" id="wd-available-from" defaultValue="2025-01-20"/>
-                </td>
-                <td>
-                    <label htmlFor="wd-available-until">Available Until:</label><br/>
-                    <input type="date" id="wd-available-until" defaultValue="2025-01-30"/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <hr/>
-                    <button>Cancel</button>
-                </td>
-                <td>
-                    <hr/>
-                    <button>Save</button>
-                </td>
-            </tr>
-        </tbody>
-      </table>
+import { Button, Col, Form, FormControl, FormLabel, FormSelect, FormText, InputGroup, Row } from "react-bootstrap";
+import InputGroupText from "react-bootstrap/esm/InputGroupText";
+import { FaCalendarAlt, FaPlus } from "react-icons/fa";
 
-    </div>
-);}
+export default function AssignmentEditor() {
+    return (
+        <div id="wd-assignments-editor">
+            <Row>
+                <Col xs={1}>
+
+                </Col>
+                <Col>
+                    <FormLabel>Assignment Name:</FormLabel>
+                    <FormControl defaultValue="A1"></FormControl>
+                    <br />
+                    <FormControl as="textarea" style={{ height: "200px" }} defaultValue="The assignment is available online. For this HTML assignment, I set up the environment and created basic web pages using HTML. I practiced adding headings, paragraphs, links, and lists to structure content properly. Setting up the environment allowed me to test my code in a browser and see how different HTML tags work, giving me a solid foundation for future web development."></FormControl>
+                    <br />
+                    <Row>
+                        <FormLabel column sm={3}>Points:</FormLabel>
+                        <Col sm={9}>
+                            <FormControl defaultValue="100"></FormControl>
+                        </Col>
+                    </Row>
+                    <br />
+                    <Row>
+                        <FormLabel column sm={3}>Assignment Group:</FormLabel>
+                        <Col sm={9}>
+                            <FormSelect>
+                                <option value="0" defaultChecked>Assignments</option>
+                                <option value="1">etc</option>
+                            </FormSelect>
+                        </Col>
+                    </Row>
+                    <br />
+                    <Row>
+                        <FormLabel column sm={3}>Display Grade:</FormLabel>
+                        <Col sm={9}>
+                            <FormSelect>
+                                <option value="0" defaultChecked>Percentage</option>
+                                <option value="1">Letter Grade</option>
+                            </FormSelect>
+                        </Col>
+                    </Row>
+                    <br />
+                    <Row>
+                        <FormLabel column sm={3}>Submission type:</FormLabel>
+                        <Col sm={9}>
+
+                            <div className="border rounded p-3 mt-3">
+                                <FormSelect>
+                                    <option value="0" defaultChecked>Online</option>
+                                    <option value="1">Offline</option>
+                                </FormSelect>
+                                <br />
+                                <strong>Online Entry Options:</strong>
+                                <br />
+                                <div className="mt-2">
+                                    <Form.Check type="checkbox" id="text-entry" label="Text Entry" /><br />
+                                    <Form.Check
+                                        type="checkbox"
+                                        id="website-url"
+                                        label="Website URL"
+                                        defaultChecked
+                                    /><br />
+                                    <Form.Check
+                                        type="checkbox"
+                                        id="media-recordings"
+                                        label="Media Recordings"
+                                    /><br />
+                                    <Form.Check
+                                        type="checkbox"
+                                        id="student-annotation"
+                                        label="Student Annotation"
+                                    /><br />
+                                    <Form.Check type="checkbox" id="file-uploads" label="File Uploads" />
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
+                    <br />
+                    <Row>
+                        <FormLabel column sm={3}>Assign To:</FormLabel>
+                        <Col sm={9}>
+
+                            <div className="border rounded p-3">
+                                <strong>Assign To:</strong><br /><br />
+                                <FormControl defaultValue="Everyone" className="mb-3" />
+                                <br />
+                                <strong>Due:</strong>
+                                <br />
+                                <InputGroup className="mb-3">
+                                    <FormControl
+                                        type="date"
+                                        defaultValue="2024-05-14"
+                                    />
+                                    <InputGroupText>
+                                        <FaCalendarAlt />
+                                    </InputGroupText>
+                                </InputGroup>
+                                <Row>
+                                    <Col>
+                                        <strong>Available from</strong>
+                                        <InputGroup>
+                                            <FormControl
+                                                type="date"
+                                                defaultValue="2024-05-06"
+                                            />
+                                            <InputGroupText>
+                                                <FaCalendarAlt />
+                                            </InputGroupText>
+                                        </InputGroup>
+                                    </Col>
+                                    <Col>
+                                        <strong>Until</strong>
+                                        <InputGroup>
+                                            <FormControl type="date" />
+                                            <InputGroupText>
+                                                <FaCalendarAlt />
+                                            </InputGroupText>
+                                        </InputGroup>
+                                    </Col>
+                                </Row>
+                            </div>
+                        </Col>
+                    </Row>
+                    <hr />
+                    <Row className="float-end">
+                        <Col>
+                            <Button variant="secondary" size="lg" className="me-1" id="wd-add-module-btn">
+                            Cancel
+                            </Button>
+                        </Col>
+                        <Col>
+                            <Button variant="danger" size="lg" className="me-1" id="wd-add-module-btn">
+                            Save
+                            </Button>
+                        </Col>
+                    </Row>
+                    
+                </Col>
+                <Col xs={1}>
+
+                </Col>
+            </Row>
+        </div>
+    );
+}
