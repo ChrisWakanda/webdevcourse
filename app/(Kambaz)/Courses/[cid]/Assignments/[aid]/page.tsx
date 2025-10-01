@@ -90,8 +90,8 @@ export default function AssignmentEditor() {
                                 <br />
                                 <InputGroup className="mb-3">
                                     <FormControl
-                                        type="text"
-                                        defaultValue="May 13, 2024, 11:59 PM"
+                                        type="date"
+                                        defaultValue="2024-05-14"
                                     />
                                     <InputGroupText>
                                         <FaCalendarAlt />
@@ -102,8 +102,8 @@ export default function AssignmentEditor() {
                                         <strong>Available from</strong>
                                         <InputGroup>
                                             <FormControl
-                                                type="text"
-                                                defaultValue="May 6, 2024, 12:00 AM"
+                                                type="date"
+                                                defaultValue="2024-05-06"
                                             />
                                             <InputGroupText>
                                                 <FaCalendarAlt />
@@ -113,7 +113,7 @@ export default function AssignmentEditor() {
                                     <Col>
                                         <strong>Until</strong>
                                         <InputGroup>
-                                            <FormControl type="text" />
+                                            <FormControl type="date" />
                                             <InputGroupText>
                                                 <FaCalendarAlt />
                                             </InputGroupText>
