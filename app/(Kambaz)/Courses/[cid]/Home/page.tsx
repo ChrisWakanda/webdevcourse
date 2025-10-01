@@ -3,7 +3,7 @@ import CourseStatus from "./status";
 export default function Home() {
     return (
     <div id="wd-home">
-        <table>
+        {/* <table>
             <tbody>
                 <tr>
                     <td>
@@ -21,7 +21,7 @@ export default function Home() {
                     </td>
                 </tr>
             </tbody>
-        </table>
+        </table> */}
         <div className="d-flex" id="wd-home">
             <div className="flex-fill me-3">
                 <Modules/>
