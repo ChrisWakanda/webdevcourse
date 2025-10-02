@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Card, CardBody, CardImg, CardText, CardTitle, Col, Row } from "react-bootstrap";
+import { Button, Card, CardBody, CardImg, CardText, CardTitle, Col, Row } from "react-bootstrap";
 export default function Dashboard() {
     return (
         <div id="dashboard">
@@ -27,6 +27,7 @@ export default function Dashboard() {
                                 <CardText  className="wd-dashboard-course-description overflow-hidden" style={{ height: "100px" }}>
                                     Specialization: Full Stack Software Developer
                                 </CardText>
+                                <Button variant="primary">Go</Button>
                             </CardBody>
                         </Link>
                     </Card>         
@@ -42,6 +43,7 @@ export default function Dashboard() {
                                 <CardText  className="wd-dashboard-course-description overflow-hidden" style={{ height: "100px" }}>
                                     Specialization: Full Stack Software Developer
                                 </CardText>
+                                <Button variant="primary">Go</Button>
                             </CardBody>
                         </Link>
                     </Card>
@@ -57,6 +59,7 @@ export default function Dashboard() {
                                 <CardText  className="wd-dashboard-course-description overflow-hidden" style={{ height: "100px" }}>
                                     Specialization: Full Stack Software Developer
                                 </CardText>
+                                <Button variant="primary">Go</Button>
                             </CardBody>
                         </Link>
                     </Card>
@@ -72,6 +75,7 @@ export default function Dashboard() {
                                 <CardText  className="wd-dashboard-course-description overflow-hidden" style={{ height: "100px" }}>
                                     Specialization: Full Stack Software Developer
                                 </CardText>
+                                <Button variant="primary">Go</Button>
                             </CardBody>
                         </Link>
                     </Card>
@@ -87,6 +91,7 @@ export default function Dashboard() {
                                 <CardText  className="wd-dashboard-course-description overflow-hidden" style={{ height: "100px" }}>
                                     Specialization: Full Stack Software Developer
                                 </CardText>
+                                <Button variant="primary">Go</Button>
                             </CardBody>
                         </Link>
                     </Card>
@@ -102,6 +107,7 @@ export default function Dashboard() {
                                 <CardText  className="wd-dashboard-course-description overflow-hidden" style={{ height: "100px" }}>
                                     Specialization: Full Stack Software Developer
                                 </CardText>
+                                <Button variant="primary">Go</Button>
                             </CardBody>
                         </Link>
                     </Card>
@@ -117,6 +123,7 @@ export default function Dashboard() {
                                 <CardText  className="wd-dashboard-course-description overflow-hidden" style={{ height: "100px" }}>
                                     Specialization: Full Stack Software Developer
                                 </CardText>
+                                <Button variant="primary">Go</Button>
                             </CardBody>
                         </Link>
                     </Card>
