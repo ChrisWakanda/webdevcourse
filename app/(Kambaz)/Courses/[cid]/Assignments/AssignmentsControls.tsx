@@ -3,29 +3,26 @@ import { FaMagnifyingGlass, FaPlus } from "react-icons/fa6";
 import InputGroupText from "react-bootstrap/esm/InputGroupText";
 export default function AssignmentsControl() {
     return (
-        <div>
+        <div className="d-flex justify-content-between">
 
-            <Row>
-                <Col xs={7}>
-                    <InputGroup className="mb-3">
+                    <InputGroup className="me-3" style={{
+                    }}>
                         <InputGroupText>
                             <FaMagnifyingGlass />
                         </InputGroupText>
                         <FormControl placeholder="Search...">
                         </FormControl>
                     </InputGroup>
-                </Col>
-                <Col>
-                    <Button variant="secondary" size="sm" className="me-1 justify-right" id="wd-add-module-btn">
+                <div className="d-flex flex-row">
+                    <Button style={{minWidth: 120}} variant="secondary" size="sm" className="me-1" id="wd-add-module-btn">
                         <FaPlus className="position-relative me-2" style={{ bottom: "1px" }} />
                         Group
                     </Button>
-                    <Button variant="danger" size="sm" className="me-1 justify-right" id="wd-add-module-btn">
+                    <Button style={{minWidth: 120}} variant="danger" size="sm" className="me-1" id="wd-add-module-btn">
                         <FaPlus className="position-relative me-2" style={{ bottom: "1px" }} />
                         Assignment
                     </Button>
-                </Col>
-            </Row>
+                </div>
         </div>
     )
 }
