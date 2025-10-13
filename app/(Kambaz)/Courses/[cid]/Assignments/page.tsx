@@ -30,7 +30,9 @@ export default function Assignments() {
           </div>
           <ListGroup className="wd-lessons rounded-0">
             {assignments
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
               .filter((assignment: any) => assignment.course === cid)
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
               .map((assignment: any) => (
                 <ListGroupItem key={assignment._id} className="wd-lesson p-3 ps-1">
                   <Row className="align-items-center">
