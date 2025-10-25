@@ -173,7 +173,9 @@ export default function AssignmentEditor() {
   const router = useRouter();
   const dispatch = useDispatch();
   
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { assignments } = useSelector((state: any) => state.assignmentsReducer);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const assignment = assignments.find((a: any) => a._id === aid);
   
   const [formData, setFormData] = useState({

@@ -13,15 +13,18 @@ export default function Dashboard() {
 
     //const [courses, setCourses] = useState<any[]>(db.courses);
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const { currentUser } = useSelector((state: any) => state.accountReducer);
     const { enrollments } = db;
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [course, setCourse] = useState<any>({
         _id: "0", name: "New Course", number: "New Number",
         startDate: "2023-09-10", endDate: "2023-12-15",
         cardImg: "/images/reactjs.jpg", description: "New Description"
     });
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const { courses } = useSelector((state: any) => state.coursesReducer);
     const dispatch = useDispatch();
 
@@ -56,7 +59,7 @@ export default function Dashboard() {
 
                 <Row xs={1} md={5} className="g-4">
                     {
-                        // @ts-ignore
+                        // @ts-expect-error
                         courses.map((course) => (
                             <Col key={course._id} className="wd-dashboard-course" style={{ width: "300px" }}>
                                 <Card>

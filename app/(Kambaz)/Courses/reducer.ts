@@ -10,15 +10,19 @@ const coursesSlice = createSlice({
  reducers: {
    addNewCourse: (state, { payload: course }) => {
      const newCourse = { ...course, _id: uuidv4() };
+     // eslint-disable-next-line @typescript-eslint/no-explicit-any
      state.courses = [...state.courses, newCourse] as any;
    },
    deleteCourse: (state, { payload: courseId }) => {
      state.courses = state.courses.filter(
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
        (course: any) => course._id !== courseId
      );
    },
    updateCourse: (state, { payload: course }) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
      state.courses = state.courses.map((c: any) =>
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
        c._id === course._id ? course : c
      ) as any;
    },

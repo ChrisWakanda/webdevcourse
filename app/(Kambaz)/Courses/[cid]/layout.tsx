@@ -12,7 +12,9 @@ export default function CoursesLayout(
 { children }: { children: ReactNode }) {
  //const { cid } = await params;
  const { cid } = useParams();
+ // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { courses } = useSelector((state: any) => state.coursesReducer);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
  const course = courses.find((course: any) => course._id === cid);
  const [showNav, setShowNav] = useState(true);
  return (

@@ -97,9 +97,11 @@ export default function Assignments() {
   const { cid } = useParams();
   const router = useRouter();
   const dispatch = useDispatch();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { assignments } = useSelector((state: any) => state.assignmentsReducer);
 
   const courseAssignments = assignments.filter(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (assignment: any) => assignment.course === cid
   );
 
@@ -123,6 +125,7 @@ export default function Assignments() {
             <AssignmentControlButtons />
           </div>
           <ListGroup className="wd-lessons rounded-0">
+            {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
             {courseAssignments.map((assignment: any) => (
               <ListGroupItem key={assignment._id} className="wd-lesson p-3 ps-1">
                 <Row className="align-items-center">
