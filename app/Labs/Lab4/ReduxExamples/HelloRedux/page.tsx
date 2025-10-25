@@ -1,6 +1,6 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 export default function HelloRedux() {
-  const { message } = useSelector((state: any) => state.helloReducer);
+  const { message } = useSelector((state: { helloReducer: { message: string } }) => state.helloReducer);
   //const message = "Hello World"
   return (
     <div id="wd-hello-redux">
