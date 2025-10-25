@@ -24,6 +24,7 @@ const coursesSlice = createSlice({
      state.courses = state.courses.map((c: any) =>
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
        c._id === course._id ? course : c
+       // eslint-disable-next-line @typescript-eslint/no-explicit-any
      ) as any;
    },
  },

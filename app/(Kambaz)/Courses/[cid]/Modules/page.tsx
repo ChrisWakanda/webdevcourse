@@ -30,6 +30,7 @@ export default function Modules() {
     // const updateModule = (module: any) => {
     //     setModules(modules.map((m) => (m._id === module._id ? module : m)));
     // };
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const { modules } = useSelector((state: any) => state.modulesReducer);
     const dispatch = useDispatch();
 
