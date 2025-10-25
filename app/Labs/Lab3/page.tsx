@@ -34,6 +34,7 @@ import PathParameters from "./PathParameters";
 export default function Lab3() {
   return (
     <div id="wd-lab3">
+      <br/>
       <h1>Lab 3</h1><br/>
       <h3>JavaScript Fundamentals</h3><br/>
       <hr/>
