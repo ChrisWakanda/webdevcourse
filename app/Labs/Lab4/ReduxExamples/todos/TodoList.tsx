@@ -18,7 +18,7 @@
 //     </div>
 // );}
 "use client"
-export const dynamic = 'force-dynamic';
+
 import React from "react";
 import TodoForm from "./TodoForm";
 import TodoItem from "./TodoItem";
