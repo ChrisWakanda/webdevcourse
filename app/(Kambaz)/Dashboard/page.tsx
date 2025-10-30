@@ -58,16 +58,10 @@ export default function Dashboard() {
 
 
                 <Row xs={1} md={5} className="g-4">
-                    {courses
-                        .filter((course) =>
-                        enrollments.some(
-                            (enrollment) =>
-                                enrollment.user === currentUser._id &&
-                                enrollment.course === course._id
-                        ))
+                    {
 
                         // @ts-expect-error: courses is implicitly any
-                        .map((course) => (
+                        courses.map((course) => (
                     <Col key={course._id} className="wd-dashboard-course" style={{ width: "300px" }}>
                         <Card>
                             <Link href={`/Courses/${course._id}/Home`}
