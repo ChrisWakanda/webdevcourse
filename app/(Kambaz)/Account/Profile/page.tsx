@@ -92,30 +92,39 @@ export default function Profile() {
  }, []);
  return (
    <div className="wd-profile-screen">
-     <h3>Profile</h3>
+     <h3>Profile:</h3>
+     <hr/><br/>
      {profile && (
        <div>
+        <h6>Username:</h6>
          <FormControl id="wd-username" className="mb-2"
            defaultValue={profile.username}
            onChange={(e) => setProfile({ ...profile, username: e.target.value }) }
          />
+         <h6>Password:</h6>
          <FormControl id="wd-password" className="mb-2"
            defaultValue={profile.password}
            onChange={(e) => setProfile({ ...profile, password: e.target.value }) }
          />
+         <h6>First Name:</h6>
          <FormControl id="wd-firstname" className="mb-2"
            defaultValue={profile.firstName}
            onChange={(e) => setProfile({ ...profile, firstName: e.target.value }) }
          />
+         <h6>Last Name:</h6>
          <FormControl id="wd-lastname" className="mb-2"
            defaultValue={profile.lastName}
            onChange={(e) => setProfile({ ...profile, lastName: e.target.value }) } />
+
+          <h6>Date of Birth:</h6>
          <FormControl id="wd-dob" className="mb-2" type="date"
            defaultValue={profile.dob}
            onChange={(e) => setProfile({ ...profile, dob: e.target.value })} />
+           <h6>Email:</h6>
          <FormControl id="wd-email" className="mb-2"
            defaultValue={profile.email}
            onChange={(e) => setProfile({ ...profile, email: e.target.value })} />
+           <h6>Role:</h6>
          <select className="form-control mb-2" id="wd-role" 
            onChange={(e) => setProfile({ ...profile, role: e.target.value })} >
            <option value="USER">User</option>
