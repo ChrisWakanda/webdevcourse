@@ -501,7 +501,7 @@ export default function Dashboard() {
         await coursesClient.updateCourse(course);
         dispatch(
             setCourses(
-                courses.map((c) => {
+                courses.map((c: { _id: any; }) => {
                     if (c._id === course._id) {
                         return course;
                     } else {
