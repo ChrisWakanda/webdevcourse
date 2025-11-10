@@ -31,10 +31,12 @@
 import { Button, FormControl, InputGroup } from "react-bootstrap";
 import { FaMagnifyingGlass, FaPlus } from "react-icons/fa6";
 import InputGroupText from "react-bootstrap/esm/InputGroupText";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
+
 
 export default function AssignmentsControl() {
     const { cid } = useParams();
+    const router = useRouter();
 
     return (
         <div className="d-flex justify-content-between">
@@ -56,7 +58,7 @@ export default function AssignmentsControl() {
                     size="sm" 
                     className="me-1" 
                     id="wd-add-module-btn"
-                    onClick={() => window.location.href = `/Courses/${cid}/Assignments/New`}
+                    onClick={() => router.push(`/Courses/${cid}/Assignments/New`)}
                 >
                     <FaPlus className="position-relative me-2" style={{ bottom: "1px" }} />
                     Assignment

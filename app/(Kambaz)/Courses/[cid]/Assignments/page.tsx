@@ -1,7 +1,7 @@
 
+
 // "use client"
-// import { useParams } from "next/navigation";
-// import * as db from "../../../Database";
+// import { useParams, useRouter } from "next/navigation";
 // import Link from "next/link";
 // import { Col, ListGroup, ListGroupItem, Row } from "react-bootstrap";
 // import { BsGripVertical } from "react-icons/bs";
@@ -10,10 +10,26 @@
 // import AssignmentsControl from "./AssignmentsControls";
 // import AssignmentControlButtons from "./AssignmentControlButtons";
 // import AssignmentItemControlButtons from "./AssignmentItemControlButtons";
+// import { useSelector, useDispatch } from "react-redux";
+// import { deleteAssignment } from "./reducer";
 
 // export default function Assignments() {
 //   const { cid } = useParams();
-//   const assignments = db.assignments;
+//   const router = useRouter();
+//   const dispatch = useDispatch();
+//   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+//   const { assignments } = useSelector((state: any) => state.assignmentsReducer);
+
+//   const courseAssignments = assignments.filter(
+//     // eslint-disable-next-line @typescript-eslint/no-explicit-any
+//     (assignment: any) => assignment.course === cid
+//   );
+
+//   const handleDelete = (assignmentId: string) => {
+//     if (window.confirm("Are you sure you want to remove this assignment?")) {
+//       dispatch(deleteAssignment(assignmentId));
+//     }
+//   };
 
 //   return (
 //     <div id="wd-assignments">
@@ -29,49 +45,49 @@
 //             <AssignmentControlButtons />
 //           </div>
 //           <ListGroup className="wd-lessons rounded-0">
-//             {assignments
-//             // eslint-disable-next-line @typescript-eslint/no-explicit-any
-//               .filter((assignment: any) => assignment.course === cid)
-//               // eslint-disable-next-line @typescript-eslint/no-explicit-any
-//               .map((assignment: any) => (
-//                 <ListGroupItem key={assignment._id} className="wd-lesson p-3 ps-1">
-//                   <Row className="align-items-center">
-//                     <Col xs="auto">
-//                       <BsGripVertical className="me-2 fs-1" />
-//                       <BiEdit className="fs-3 me-2 text-success" />
-//                     </Col>
-//                     <Col>
-//                       <Row xs="auto">
-//                         <div className="text-start">
-//                           <Link
-//                             href={`/Courses/${cid}/Assignments/${assignment._id}`}
-//                             className="wd-assignment-link"
-//                           >
-//                             <h5>{assignment.title}</h5>
-//                           </Link>
-//                         </div>
-//                       </Row>
-//                       <Row xs="auto">
-//                         <div className="text-start">
-//                           <h6>
-//                             Multiple Modules | <b>Not available</b> until {assignment.availableDate} at 12:00am
-//                           </h6>
-//                         </div>
-//                       </Row>
-//                       <Row xs="auto">
-//                         <div className="text-start">
-//                           <h6>
-//                             <b>Due:</b> {assignment.dueDate} at 11:59pm | {assignment.points}pts
-//                           </h6>
-//                         </div>
-//                       </Row>
-//                     </Col>
-//                     <Col>
-//                       <AssignmentItemControlButtons />
-//                     </Col>
-//                   </Row>
-//                 </ListGroupItem>
-//               ))}
+//             {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+//             {courseAssignments.map((assignment: any) => (
+//               <ListGroupItem key={assignment._id} className="wd-lesson p-3 ps-1">
+//                 <Row className="align-items-center">
+//                   <Col xs="auto">
+//                     <BsGripVertical className="me-2 fs-1" />
+//                     <BiEdit className="fs-3 me-2 text-success" />
+//                   </Col>
+//                   <Col>
+//                     <Row xs="auto">
+//                       <div className="text-start">
+//                         <Link
+//                           href={`/Courses/${cid}/Assignments/${assignment._id}`}
+//                           className="wd-assignment-link"
+//                         >
+//                           <h5>{assignment.title}</h5>
+//                         </Link>
+//                       </div>
+//                     </Row>
+//                     <Row xs="auto">
+//                       <div className="text-start">
+//                         <h6>
+//                           Multiple Modules | <b>Not available</b> until {assignment.availableFromDate} at 12:00am
+//                         </h6>
+//                       </div>
+//                     </Row>
+//                     <Row xs="auto">
+//                       <div className="text-start">
+//                         <h6>
+//                           <b>Due:</b> {assignment.dueDate} at 11:59pm | {assignment.points}pts
+//                         </h6>
+//                       </div>
+//                     </Row>
+//                   </Col>
+//                   <Col xs="auto">
+//                     <AssignmentItemControlButtons 
+//                       assignmentId={assignment._id}
+//                       onDelete={handleDelete} 
+//                     />
+//                   </Col>
+//                 </Row>
+//               </ListGroupItem>
+//             ))}
 //           </ListGroup>
 //         </ListGroupItem>
 //       </ListGroup>
@@ -79,9 +95,8 @@
 //   );
 // }
 
-
 "use client"
-import { useParams, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 import Link from "next/link";
 import { Col, ListGroup, ListGroupItem, Row } from "react-bootstrap";
 import { BsGripVertical } from "react-icons/bs";
@@ -91,23 +106,28 @@ import AssignmentsControl from "./AssignmentsControls";
 import AssignmentControlButtons from "./AssignmentControlButtons";
 import AssignmentItemControlButtons from "./AssignmentItemControlButtons";
 import { useSelector, useDispatch } from "react-redux";
-import { deleteAssignment } from "./reducer";
+import { setAssignments } from "./reducer";
+import * as client from "../../client";
+import { useEffect } from "react";
 
 export default function Assignments() {
   const { cid } = useParams();
-  const router = useRouter();
   const dispatch = useDispatch();
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { assignments } = useSelector((state: any) => state.assignmentsReducer);
 
-  const courseAssignments = assignments.filter(
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (assignment: any) => assignment.course === cid
-  );
+  const fetchAssignments = async () => {
+    const assignments = await client.findAssignmentsForCourse(cid as string);
+    dispatch(setAssignments(assignments));
+  };
 
-  const handleDelete = (assignmentId: string) => {
+  useEffect(() => {
+    fetchAssignments();
+  }, []);
+
+  const handleDelete = async (assignmentId: string) => {
     if (window.confirm("Are you sure you want to remove this assignment?")) {
-      dispatch(deleteAssignment(assignmentId));
+      await client.deleteAssignment(assignmentId);
+      dispatch(setAssignments(assignments.filter((a: any) => a._id !== assignmentId)));
     }
   };
 
@@ -125,8 +145,7 @@ export default function Assignments() {
             <AssignmentControlButtons />
           </div>
           <ListGroup className="wd-lessons rounded-0">
-            {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-            {courseAssignments.map((assignment: any) => (
+            {assignments.map((assignment: any) => (
               <ListGroupItem key={assignment._id} className="wd-lesson p-3 ps-1">
                 <Row className="align-items-center">
                   <Col xs="auto">
